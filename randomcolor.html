@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	
+	body{
+	margin:0;
+	padding:0;
+	height:100vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	}
+	.container{
+		width:300px;
+		height:300px;
+		background-color:red;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction:column;
+	}
+	.text{
+		font-size:2rem;
+	}
+	button{
+		padding:1rem;
+	}
+	</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="text">#000000
+			</div>
+			<button onClick="color()">change color</button>
+		</div>
+		<script>
+		function color(){
+			var randomcolor=(Math.floor(Math.random()*16456789))
+			document.body.style.backgroundColor="#"+randomcolor;
+			var text=document.querySelector(".text");
+			text.innerHTML="#"+randomcolor;
+		}
+		</script>
+	</body>
+</html>	
